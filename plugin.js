@@ -16,6 +16,7 @@ window.RochePlugin.register({
               color: #1f1f1f;
               font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             }
+
             .rm-header {
               height: 190px;
               background: linear-gradient(135deg, #2f3a46, #7d8791);
@@ -26,6 +27,7 @@ window.RochePlugin.register({
               align-items: flex-end;
               justify-content: flex-end;
             }
+
             .rm-cover-title {
               position: absolute;
               left: 18px;
@@ -34,17 +36,20 @@ window.RochePlugin.register({
               font-weight: 800;
               letter-spacing: 1px;
             }
+
             .rm-user-card {
               display: flex;
               align-items: center;
               gap: 10px;
               transform: translateY(38px);
             }
+
             .rm-user-name {
               font-size: 16px;
               font-weight: 700;
               text-shadow: 0 1px 4px rgba(0,0,0,.25);
             }
+
             .rm-avatar {
               width: 64px;
               height: 64px;
@@ -53,9 +58,11 @@ window.RochePlugin.register({
               background: #ddd;
               border: 2px solid white;
             }
+
             .rm-body {
               padding: 52px 12px 24px;
             }
+
             .rm-card {
               background: white;
               border-radius: 16px;
@@ -63,12 +70,14 @@ window.RochePlugin.register({
               margin-bottom: 12px;
               box-shadow: 0 1px 8px rgba(0,0,0,.04);
             }
+
             .rm-label {
               display: block;
               font-size: 13px;
               color: #666;
               margin-bottom: 6px;
             }
+
             .rm-select,
             .rm-input,
             .rm-textarea {
@@ -82,17 +91,20 @@ window.RochePlugin.register({
               margin-bottom: 10px;
               box-sizing: border-box;
             }
+
             .rm-textarea {
               min-height: 80px;
               resize: vertical;
               line-height: 1.5;
             }
+
             .rm-row {
               display: flex;
               gap: 8px;
               flex-wrap: wrap;
               align-items: center;
             }
+
             .rm-btn {
               border: none;
               border-radius: 12px;
@@ -103,42 +115,51 @@ window.RochePlugin.register({
               color: white;
               cursor: pointer;
             }
+
             .rm-btn.secondary {
               background: #eeeeee;
               color: #222;
             }
+
             .rm-btn.danger {
               background: #ffecec;
               color: #c62828;
             }
+
             .rm-btn:disabled {
               opacity: .45;
               cursor: not-allowed;
             }
+
             .rm-status {
               font-size: 13px;
               color: #666;
               margin-top: 8px;
               white-space: pre-wrap;
             }
+
             .rm-api-box {
               display: none;
               margin-top: 8px;
               padding-top: 8px;
               border-top: 1px solid #eee;
             }
+
             .rm-api-box.show {
               display: block;
             }
+
             .rm-post {
               display: flex;
               gap: 10px;
               padding: 14px 2px;
               border-bottom: 1px solid #eee;
             }
+
             .rm-post:last-child {
               border-bottom: none;
             }
+
             .rm-post-avatar {
               width: 44px;
               height: 44px;
@@ -147,31 +168,37 @@ window.RochePlugin.register({
               background: #ddd;
               flex: 0 0 auto;
             }
+
             .rm-post-main {
               flex: 1;
               min-width: 0;
             }
+
             .rm-post-name {
               font-weight: 800;
               color: #3b5274;
               margin-bottom: 4px;
             }
+
             .rm-post-text {
               font-size: 15px;
               line-height: 1.6;
               white-space: pre-wrap;
               word-break: break-word;
             }
+
             .rm-time {
               font-size: 12px;
               color: #999;
               margin-top: 8px;
             }
+
             .rm-actions {
               display: flex;
               gap: 8px;
               margin-top: 8px;
             }
+
             .rm-mini-btn {
               border: none;
               background: #f0f0f0;
@@ -181,6 +208,7 @@ window.RochePlugin.register({
               font-size: 13px;
               cursor: pointer;
             }
+
             .rm-social-box {
               background: #f3f3f3;
               border-radius: 8px;
@@ -188,25 +216,31 @@ window.RochePlugin.register({
               margin-top: 8px;
               font-size: 13px;
             }
+
             .rm-like-line {
               color: #3b5274;
               margin-bottom: 4px;
             }
+
             .rm-comment {
               margin-top: 4px;
               line-height: 1.45;
             }
+
             .rm-comment b {
               color: #3b5274;
             }
+
             .rm-comment-form {
               display: none;
               margin-top: 8px;
-            }
-            .rm-comment-form.show {
-              display: flex;
               gap: 6px;
             }
+
+            .rm-comment-form.show {
+              display: flex;
+            }
+
             .rm-comment-input {
               flex: 1;
               border: 1px solid #ddd;
@@ -214,6 +248,7 @@ window.RochePlugin.register({
               padding: 8px;
               font-size: 13px;
             }
+
             .rm-empty {
               color: #888;
               text-align: center;
@@ -246,16 +281,16 @@ window.RochePlugin.register({
 
                 <div id="rmApiBox" class="rm-api-box">
                   <label class="rm-label">Provider</label>
-                  <input id="rmProvider" class="rm-input" placeholder="例如 openai / openrouter / custom" />
+                  <input id="rmProvider" class="rm-input" placeholder="例如 openai / openrouter / custom">
 
                   <label class="rm-label">模型 Model</label>
-                  <input id="rmModel" class="rm-input" placeholder="例如 gemini-3-flash-preview / gpt-4o-mini" />
+                  <input id="rmModel" class="rm-input" placeholder="例如 gemini-3-flash-preview / gpt-4o-mini">
 
                   <label class="rm-label">接口 Endpoint</label>
-                  <input id="rmEndpoint" class="rm-input" placeholder="例如 https://api.openai.com/v1" />
+                  <input id="rmEndpoint" class="rm-input" placeholder="例如 https://api.openai.com/v1">
 
                   <label class="rm-label">API Key</label>
-                  <input id="rmApiKey" class="rm-input" type="password" placeholder="填你的 key，会保存在插件私有 storage" />
+                  <input id="rmApiKey" class="rm-input" type="password" placeholder="填你的 key，会保存在插件私有 storage">
 
                   <button id="rmSaveApi" class="rm-btn secondary">保存 API 设置</button>
                 </div>
@@ -303,6 +338,7 @@ window.RochePlugin.register({
         let characters = [];
         let userPersona = null;
         let posts = [];
+
         let settings = {
           apiMode: "default",
           provider: "",
@@ -311,8 +347,8 @@ window.RochePlugin.register({
           apiKey: ""
         };
 
-        function escapeHtml(str) {
-          return String(str || "")
+        function escapeHtml(value) {
+          return String(value || "")
             .replaceAll("&", "&amp;")
             .replaceAll("<", "&lt;")
             .replaceAll(">", "&gt;")
@@ -321,18 +357,27 @@ window.RochePlugin.register({
         }
 
         function uid() {
-          if (crypto && crypto.randomUUID) return crypto.randomUUID();
+          if (window.crypto && window.crypto.randomUUID) {
+            return window.crypto.randomUUID();
+          }
           return "id-" + Date.now() + "-" + Math.random().toString(16).slice(2);
         }
 
-        function formatTime(ts) {
-          const d = new Date(ts);
+        function formatTime(timestamp) {
+          const d = new Date(timestamp);
           const now = new Date();
           const diff = Math.floor((now - d) / 1000);
+
           if (diff < 60) return "刚刚";
           if (diff < 3600) return Math.floor(diff / 60) + "分钟前";
           if (diff < 86400) return Math.floor(diff / 3600) + "小时前";
-          return `${d.getMonth() + 1}月${d.getDate日}日 ${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
+
+          const month = d.getMonth() + 1;
+          const date = d.getDate();
+          const hour = String(d.getHours()).padStart(2, "0");
+          const minute = String(d.getMinutes()).padStart(2, "0");
+
+          return month + "月" + date + "日 " + hour + ":" + minute;
         }
 
         async function savePosts() {
@@ -344,15 +389,17 @@ window.RochePlugin.register({
         }
 
         function getCharById(id) {
-          return characters.find(c => c.id === id);
+          return characters.find((c) => c.id === id);
         }
 
         function getDisplayName(person) {
-          return (person && (person.handle || person.name || person.displayName)) || "Unknown";
+          if (!person) return "Unknown";
+          return person.handle || person.name || person.displayName || "Unknown";
         }
 
         function getAvatar(person) {
-          return (person && person.avatar) || "";
+          if (!person) return "";
+          return person.avatar || "";
         }
 
         function renderFeed() {
@@ -363,9 +410,12 @@ window.RochePlugin.register({
 
           feedEl.innerHTML = posts.map((post) => {
             const liked = post.likes && post.likes.includes("me");
-            const likeNames = liked ? `<div class="rm-like-line">♥ ${escapeHtml(getDisplayName(userPersona))}</div>` : "";
-            const comments = (post.comments || []).map(c => {
-              return `<div class="rm-comment"><b>${escapeHtml(c.authorName)}：</b>${escapeHtml(c.text)}</div>`;
+            const likeNames = liked
+              ? `<div class="rm-like-line">♥ ${escapeHtml(getDisplayName(userPersona))}</div>`
+              : "";
+
+            const comments = (post.comments || []).map((comment) => {
+              return `<div class="rm-comment"><b>${escapeHtml(comment.authorName)}：</b>${escapeHtml(comment.text)}</div>`;
             }).join("");
 
             const socialBox = likeNames || comments
@@ -374,7 +424,7 @@ window.RochePlugin.register({
 
             return `
               <div class="rm-post" data-post-id="${escapeHtml(post.id)}">
-                <img class="rm-post-avatar" src="${escapeHtml(post.avatar || "")}" alt="">
+                <img class="rm-post-avatar" src="${escapeHtml(post.avatar)}" alt="">
                 <div class="rm-post-main">
                   <div class="rm-post-name">${escapeHtml(post.authorName)}</div>
                   <div class="rm-post-text">${escapeHtml(post.text)}</div>
@@ -389,7 +439,7 @@ window.RochePlugin.register({
                   ${socialBox}
 
                   <div class="rm-comment-form">
-                    <input class="rm-comment-input" placeholder="写评论..." />
+                    <input class="rm-comment-input" placeholder="写评论...">
                     <button class="rm-mini-btn" data-action="send-comment">发送</button>
                   </div>
                 </div>
@@ -399,30 +449,39 @@ window.RochePlugin.register({
 
           feedEl.querySelectorAll(".rm-post").forEach((postEl) => {
             const postId = postEl.getAttribute("data-post-id");
-            const post = posts.find(p => p.id === postId);
+            const post = posts.find((p) => p.id === postId);
+            if (!post) return;
 
-            postEl.querySelector('[data-action="like"]').onclick = async () => {
+            const likeBtn = postEl.querySelector('[data-action="like"]');
+            const commentBtn = postEl.querySelector('[data-action="comment"]');
+            const sendCommentBtn = postEl.querySelector('[data-action="send-comment"]');
+            const deleteBtn = postEl.querySelector('[data-action="delete"]');
+
+            likeBtn.onclick = async () => {
               post.likes = post.likes || [];
+
               if (post.likes.includes("me")) {
-                post.likes = post.likes.filter(x => x !== "me");
+                post.likes = post.likes.filter((x) => x !== "me");
               } else {
                 post.likes.push("me");
               }
+
               await savePosts();
               renderFeed();
             };
 
-            postEl.querySelector('[data-action="comment"]').onclick = () => {
+            commentBtn.onclick = () => {
               const form = postEl.querySelector(".rm-comment-form");
+              const input = postEl.querySelector(".rm-comment-input");
               form.classList.toggle("show");
-              const input = form.querySelector(".rm-comment-input");
               input.focus();
             };
 
-            postEl.querySelector('[data-action="send-comment"]').onclick = async () => {
+            sendCommentBtn.onclick = async () => {
               const input = postEl.querySelector(".rm-comment-input");
               const text = input.value.trim();
               if (!text) return;
+
               post.comments = post.comments || [];
               post.comments.push({
                 id: uid(),
@@ -431,17 +490,20 @@ window.RochePlugin.register({
                 text,
                 createdAt: Date.now()
               });
+
               await savePosts();
               renderFeed();
             };
 
-            postEl.querySelector('[data-action="delete"]').onclick = async () => {
+            deleteBtn.onclick = async () => {
               const ok = await roche.ui.confirm({
                 title: "删除朋友圈",
                 message: "确定删除这条朋友圈吗？"
               });
+
               if (!ok) return;
-              posts = posts.filter(p => p.id !== postId);
+
+              posts = posts.filter((p) => p.id !== postId);
               await savePosts();
               renderFeed();
             };
@@ -464,8 +526,8 @@ window.RochePlugin.register({
             if (!characters || characters.length === 0) {
               characterSelect.innerHTML = `<option value="">没有读取到角色</option>`;
             } else {
-              characterSelect.innerHTML = characters.map(c => {
-                return `<option value="${escapeHtml(c.id)}">${escapeHtml(getDisplayName(c))}</option>`;
+              characterSelect.innerHTML = characters.map((char) => {
+                return `<option value="${escapeHtml(char.id)}">${escapeHtml(getDisplayName(char))}</option>`;
               }).join("");
             }
 
@@ -474,6 +536,7 @@ window.RochePlugin.register({
             modelInput.value = settings.model || "";
             endpointInput.value = settings.endpoint || "";
             apiKeyInput.value = settings.apiKey || "";
+
             apiBox.classList.toggle("show", apiMode.value === "custom");
 
             statusEl.textContent = "准备好了。";
@@ -497,6 +560,7 @@ window.RochePlugin.register({
             endpoint: endpointInput.value.trim(),
             apiKey: apiKeyInput.value.trim()
           };
+
           await saveSettings();
           statusEl.textContent = "API 设置已保存。";
         };
@@ -549,18 +613,23 @@ window.RochePlugin.register({
             const charName = getDisplayName(charFull);
             const userName = getDisplayName(userPersona);
 
+            const charPersona = charFull.persona || charFull.bio || charFull.description || "";
+            const userText = userPersona
+              ? (userPersona.persona || userPersona.bio || userPersona.description || "")
+              : "";
+
             const prompt = `
 你现在要代替角色写一条“微信朋友圈”。
 
 【角色】
 名字：${charName}
 人设：
-${charFull.persona || charFull.bio || charFull.description || ""}
+${charPersona}
 
 【用户】
 名字：${userName}
 人设：
-${userPersona && (userPersona.persona || userPersona.bio || userPersona.description || "") || ""}
+${userText}
 
 【用户要求】
 ${idea || "自由发挥，写一条符合角色状态和性格的朋友圈。"}
@@ -577,7 +646,12 @@ ${idea || "自由发挥，写一条符合角色状态和性格的朋友圈。"}
             `.trim();
 
             const chatOptions = {
-              messages: [{ role: "user", content: prompt }],
+              messages: [
+                {
+                  role: "user",
+                  content: prompt
+                }
+              ],
               temperature: 0.8
             };
 
@@ -589,7 +663,7 @@ ${idea || "自由发挥，写一条符合角色状态和性格的朋友圈。"}
             }
 
             const result = await roche.ai.chat(chatOptions);
-            const text = (result && result.text ? result.text : "").trim();
+            const text = result && result.text ? result.text.trim() : "";
 
             if (!text) {
               statusEl.textContent = "AI 没有返回内容。";
@@ -607,6 +681,7 @@ ${idea || "自由发挥，写一条符合角色状态和性格的朋友圈。"}
               createdAt: Date.now()
             });
 
+            postIdea.value = "";
             await savePosts();
             renderFeed();
             statusEl.textContent = "角色已发布朋友圈。";
@@ -622,7 +697,9 @@ ${idea || "自由发挥，写一条符合角色状态和性格的朋友圈。"}
             title: "清空朋友圈",
             message: "确定清空全部朋友圈吗？这个操作只清空插件私有数据，不影响主记忆。"
           });
+
           if (!ok) return;
+
           posts = [];
           await savePosts();
           renderFeed();
