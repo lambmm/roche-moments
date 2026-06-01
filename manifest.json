@@ -1,7 +1,7 @@
 {
   "id": "roche-moments",
   "name": "Roche 朋友圈",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "让角色发朋友圈，支持点赞、评论和自定义 AI API。",
   "author": "lambmm",
   "entry": "https://raw.githubusercontent.com/lambmm/roche-moments/main/plugin.js",
